@@ -37,12 +37,12 @@ Received: from ws003.example.com (194.26.68.53) by
  onehop.mail.protection.outlook.com (100.127.142.126) with Microsoft
  SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id
  15.20.6086.24 via Frontend Transport; Sun, 12 Feb 2023 16:09:31 +0000
-Received: from glpdwsmailm006.internal (20.236.72.38) by
+Received: from sendhop2.internal (20.236.72.38) by
  mail.example.com (20.146.24.53) with Microsoft SMTP Server
  (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256_P256) id
  15.1.2507.16; Mon, 12 Feb 2023 17:05:33 +0100
 Received: from sendhop1.internal (20.146.72.39) by
- glpdwsmailm006.internal (20.146.72.38) with Microsoft SMTP Server
+ sendhop2.internal (20.146.72.38) with Microsoft SMTP Server
  (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256) id
  15.1.2507.16; Mon, 12 Feb 2023 17:09:30 +0100
 Received: from 172.20.20.20 (20.146.32.13) by sendhop1.internal
