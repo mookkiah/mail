@@ -12,7 +12,12 @@ import javax.mail.internet.MimeMessage;
 /**
  * This approach is not secure and it will work only if your email server has open relay or a proxy 
  * which doesn't expect SSL or authentication.
- * This code should not be in production.
+ * This code should not be in production.<br/><br/>
+ * 
+ * For this you need a SMTP server either in your localhost or in your network.<br/>
+ * You may run a development purpose SMTP server like `smtp4dev` or `mailhog`<br/>
+ * - docker run -p 3000:80 -p 2525:25 -d --name smtpdev rnwood/smtp4dev<br/>
+ * - docker run -p 8025:8025 -p 1025:1025 -d --name mailhog mailhog/mailhog<br/>
  * 
  * @author mahendran
  *
@@ -22,16 +27,16 @@ public class OpenRelayMail {
 	public static void main(String[] args) {
 
 		
-		String to = "email-receipient@mailinator.com";
+		String to = "email-receipient@localexample.com";
 
 		// Sender's email ID needs to be mentioned
-		String from = "your.email@example.com";
+		String from = "dummy.mailbox@example.com";
 
 		// Get system properties
 		Properties properties = System.getProperties();
 
-		properties.put("mail.smtp.host", "smtp.internal");
-		properties.put("mail.smtp.port", "25");
+		properties.put("mail.smtp.host", "localhost");
+		properties.put("mail.smtp.port", "1025");
 
 		
 		Session session = Session.getDefaultInstance(properties);
